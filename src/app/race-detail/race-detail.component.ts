@@ -8,7 +8,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 })
 export class RaceDetailComponent implements OnInit {
 
-  private raceId;
+  raceId;
 
   constructor(private route: ActivatedRoute) { }
 
