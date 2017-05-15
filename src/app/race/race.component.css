@@ -84,6 +84,14 @@ h2 {
   margin: 0 0;
 }
 
+.race-info h3 {
+  margin: 0 0;
+}
+
+.race-info h3 a {
+  color: white;
+}
+
 .race-info td:last-child {
   padding: 0 20px;
 }

@@ -7,17 +7,35 @@ import { AppComponent } from './app.component';
 import { RacesComponent } from './races/races.component';
 import { RaceService } from './races/race.service';
 import { RaceComponent } from './race/race.component';
+import { RouterModule } from '@angular/router';
+import { RaceDetailComponent } from './race-detail/race-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RacesComponent,
-    RaceComponent
+    RaceComponent,
+    RaceDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {
+        path:'',
+        redirectTo: 'races',
+        pathMatch : 'full'
+      }
+      ,{
+      path:'races',
+      component:RacesComponent
+    },
+    {
+      path:'races/:id',
+      component: RaceDetailComponent
+    }
+  ])
   ],
   providers: [ RaceService ],
   bootstrap: [AppComponent]
